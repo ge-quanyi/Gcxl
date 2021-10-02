@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.13)
+project(test)
+set(CMAKE_CXX_STANDARD 14)
+find_package(OpenCV REQUIRED)
+add_executable(test main.cpp)
+#find_library(wiringPi_LIB wiringPi)
+target_link_libraries(test ${OpenCV_LIBS})
+target_link_libraries(test wiringPi)
